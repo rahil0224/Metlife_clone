@@ -36,7 +36,7 @@
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 90%;
-  height: auto;
+  height: 200px;
   box-sizing: border-box;
   border-color: #337ab7;
 }
@@ -81,12 +81,20 @@
   width: 85%;
 }
 tr th {
-  //background-color: rgb(32, 146, 245);
+ background-color: rgb(32, 146, 245);
   background-color: #337ab7;
   padding : 5px;
 }
 td {
   border: 1px solid black;
+}
+.table_records{
+  margin-left:100px;
+  border: 1px solid cornflowerblue;
+  height: 30px;
+  width: 84%;
+  line-height:35px;
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   .details_source {
@@ -96,6 +104,10 @@ td {
   table{
     font-size: 12px;  
   }
+  .table_records{
+	  margin-left:140px;
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -103,6 +115,8 @@ td {
     table{
         font-size: 15px;  
       }
+	
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -110,6 +124,7 @@ td {
     table{
         font-size: 16px;  
       }
+	
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
