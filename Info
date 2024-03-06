@@ -1,11 +1,9 @@
-https://github.com/surajmlhub/gss1_hub-master
+let arr_info = [100,2003,200,031];
+let discount = 0.5;
+for(let i = 0 ; i < arr_info.length; i++){
+let discount_value = arr_info[i] - (arr_info[i] * discount);
+	arr_info[i] = discount_value;
+}
+console.log(arr_info);
 
-double arr[] = {100,200,300,700,650};
-	
-		for(int i=0;i<arr.length;i++)
-		{
-			arr[i] = arr[i]*0.9;
-		}
-		for(double number : arr) {
-			System.out.println(number);
-		}
+Discount without method 
