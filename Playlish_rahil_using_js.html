@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+			background-color: black;
+			color: white;
+		}
+		
+    </style>
+</head>
+<body>
+    <center><h2>Rahil Audio Player</h2></center>
+	<center><h2>Check in Console</center>
+     <script>  
+      class AudioTrack {
+  constructor(title, artist, duration) {
+    this.title = title;
+    this.artist = artist;
+    this.duration = duration;
+  }
+}
+
+class Playlist {
+  constructor() {
+    this.tracks = [];
+  }
+
+  addTrack(track) {
+    this.tracks.push(track);
+  }
+
+  getTotalDuration() {
+    return this.tracks.reduce((total, track) => total + track.duration, 0);
+  }
+
+  printDetails() {
+    this.tracks.forEach((track, index) => {
+      console.log(`Track ${index + 1}`);
+      console.log(`Title: ${track.title}`);
+      console.log(`Artist: ${track.artist}`);
+      console.log(`Duration: ${track.duration}`);
+    });
+  }
+}
+
+let playlist = new Playlist();
+playlist.addTrack(new AudioTrack("Rahil 1", "Artist 1", 180)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Rahil-Track 2", "Artist 2", 240)); // 240 seconds = 4 minutes
+playlist.addTrack(new AudioTrack("Rahil_Music 3", "Artist 3", 180)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Music-Rahil 4", "Artist 4", 280)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Metlife 5", "Artist 5", 580)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Rahil_Gaana 6", "Artist 6", 110)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Song_Music 7", "Artist 7", 10)); // 180 seconds = 3 minutes
+playlist.addTrack(new AudioTrack("Rahil_Gaana_Music 8", "Artist 8", 680)); // 180 seconds = 3 minutes
+
+playlist.printDetails();
+
+console.log("TOTAL DURATION: " + playlist.getTotalDuration() + " seconds");
+console.log("****** END *****");
+
+    </script>
+</body>
+</html>
