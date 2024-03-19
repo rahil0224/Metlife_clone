@@ -1,4 +1,53 @@
+<p class="para_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <p class="para">Burhan Change the class name using setAttribute</p>
+    <p id="para2">Nazneen Change the class name using setAttribute</p>
+<script>
+    // Get Attribute id 
+    let box_id = document.querySelector("div");
+    console.log(box_id);
+    let get_att = box_id.getAttribute("id");
+    console.log(get_att);
+    let head = box_id.getAttribute("name");
+    console.log(head);
+    let para = document.querySelector("p")
+    console.log(para.getAttribute("class"));
+    
+    // Set Attribute value
+    let info = document.querySelector(".para");
+    console.log(info.setAttribute("class","newClass"));
+    let div_changes = document.querySelector("div");
+    div_changes.style.backgroundColor = "Blue";
+    div_changes.style.fontSize = "20px";
+    div_changes.style.color = "white";
+    div_changes.style.lineHeight = "100px"
+    div_changes.style.alignItems = "center";
+    div_changes.innerHTML = "text";
+    
+    // inset Element & Create a Button Using Create element
+    let newBtn = document.createElement("button");
+    newBtn.innerText = "Click Me";
+    console.log(newBtn);
+    let div = document.getElementById("box2")
+    //div.append(newBtn); // Display on last 
+    // div.prepend(newBtn); // Display on First
+    //div.before(newBtn); // Display Before div
+    div.after(newBtn); //Display After div
+    
+    // Create Heading & Display on Page
+    let newHeading =  document.createElement("h1");
+    newHeading.innerText = "My Name is Burhan";
+    console.log(newHeading);
+    let para_display = document.getElementById("para2");
+    para_display.after(newHeading);
+   
+   // Remove Element
+   let remove_element = document.getElementById("para2");
+   remove_element.remove();
+   newHeading.remove();
+   newBtn.remove();
+</script>
 
+****★***************************$*************
 
 package com.demo.cnfg;
 
